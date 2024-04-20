@@ -1,0 +1,21 @@
+.content-header {
+  justify-content: end;
+  margin: 0 20px;
+
+  .btn-act{
+    display: flex;
+    align-items: center;
+  }
+  >*:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  >*:nth-child(2) {
+
+    margin-right: 20px;
+  }
+  >*:nth-child(3) {
+
+    margin-right: 20px;
+  }
+}

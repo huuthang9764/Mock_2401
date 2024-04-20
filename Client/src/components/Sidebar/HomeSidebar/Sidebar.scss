@@ -1,0 +1,58 @@
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
+// .layout {
+//   background-color: #f5f5fa;
+//   .container {
+//     height: 400px;
+//     width: 90%;
+//     margin: 0;
+
+//     .body {
+//       display: flex;
+//       flex-wrap: wrap;
+//       margin-top: 30px;
+
+//       .sidebar {
+//         height: 400px;
+//         width: 20%;
+//         margin-right: 50px;
+//         z-index: 10;
+//         background-color: #ffffff;
+
+//         .title {
+//           font-weight: bold;
+//           margin-bottom: 10px;
+//           width: 60%;
+//           // text-align: center;
+//         }
+//         .danhmuc {
+//           margin-bottom: 20px;
+//           padding: 5px;
+//           width: 95%;
+//           text-align: left;
+
+//           .icon {
+//             margin-right: 10px;
+//             margin-left: 10px;
+//           }
+//         }
+//         .danhmuc:hover {
+//           background-color: rgb(199, 195, 195);
+//           border-radius: 8px;
+//         }
+//       }
+//       .content {
+//         width: 70%;
+//         background-color: #ffffff;
+
+//         img {
+//           width: 200px;
+//           height: 100px;
+//           margin: 30px;
+//         }
+//       }
+//     }
+//   }
+// }

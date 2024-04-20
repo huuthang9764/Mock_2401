@@ -1,0 +1,159 @@
+List danh sách các Task
+
+I. Admin
+	1. Quản lý Tài khoản
+		1.1 View list `Tài khoản`.
+			a) Tìm theo tên
+			b) Lọc theo trạng thái (Đã bị ban hoặc chưa)
+			c) Lọc theo khoản thời gian tạo (minDate, maxDate)
+		
+		1.2 Create `Tài khoản`.
+		1.3 Update `Tài khoản`
+			a) Thay đổi thông tin
+			b) Đổi password
+			c) Reset password
+			d) Chỉnh sửa trạng thái (Khóa tài khoản)
+		1.4 Xóa `tài khoản`.
+
+	2. Đăng xuất
+
+
+II. CEO
+	1. Thống kê
+		a) Thống kê doanh thu
+		b) Thống kê đơn hàng
+		c) Thống kê khách hàng
+		d) Thống kê chi tiêu
+		e) Thống kê theo sản phẩm (Dựa trên đáh giá)
+
+	2. Đăng xuất
+
+III. Manager
+	1. Quản lý `Loại sản phẩm`
+		1.1 View list `Loại sản phẩm`
+			a) Tìm theo tên 
+		1.2 Tạo `Loại Sản Phẩm`
+		1.3 Update `Loai Sản Phẩm`
+		1.4 Xóa `Loại sản phẩm`
+
+	2. Quản lý `Sản phẩm`
+		2.1 View list `Sản phẩm`
+			a) Tìm theo tên 
+			b) Lọc theo giá
+			c) Lọc theo loại sản phẩm
+			d) Lọc theo trạng thái
+			e) Xem các bình luận đi kèm
+			
+		2.2 Tạo `Sản Phẩm`
+		2.3 Update `Sản Phẩm`
+			a) Thay đổi thông tin sản phẩm
+			b) Chuuyển đổi trạng thái (Kinh doanh hoặc Ngừng kinh doanh)
+		2.4 Xóa `Sản phẩm`
+		
+	3. Quản lý `Phiếu nhập kho`
+		3.1 View list `Phieu Nhập Kho`
+			a) In phiếu nhập kho (Xuất PDF)
+			b) Lọc theo thời gian 
+			c) Xem chi tiết phiếu nhập kho
+
+		3.2 Tạo `Phieu Nhap Kho`
+
+	4. Quản lý `Nha cung cấp`
+		4.1 View list `Nha Cung Cấp`
+			a) Tìm theo tên
+		4.2 Create `Nha Cung Cấp`
+		4.3 Update `Nha Cung Cấp`
+		4.4 Delete `Nha Cung Cấp`
+
+	5. Quản lý `đơn hàng`
+		5.1 View list `Đơn hàng`
+			a) Xem đơn hàng theo thời gian
+			b) Lọc đơn hàng theo trạng thái
+			c) Xem chi tiết từng đơn hàng
+
+		5.2 Update `đơn hàng`
+			a) Cập nhật trạng thái đơn hàng.
+
+	6. Đăng xuất
+	
+IV. Seller
+
+	1. Quản lý đơn hàng
+		1.1 View list `Đơn hàng`
+			a) Xem đơn hàng theo thời gian
+			b) Lọc đơn hàng theo trạng thái
+			c) Xem chi tiết từng đơn hàng
+
+		1.2 Update `đơn hàng`
+			a) Cập nhật trạng thái đơn hàng.
+
+	2. Quản lý tài khoản (Đối với tài khoản Menber)
+		2.1 View list `Tài khoản`.
+			a) Tìm theo tên
+			b) Lọc theo trạng thái (Đã bị ban hoặc chưa)
+			c) Lọc theo khoản thời gian tạo (minDate, maxDate)
+		
+		2.2 Create `Tài khoản`.
+		2.3 Update `Tài khoản`
+			a) Thay đổi thông tin
+			b) Đổi password
+			c) Reset password
+			d) Chỉnh sửa trạng thái (Khóa tài khoản)
+		2.4 Xóa `tài khoản`.
+	3. Tư vấn khách hàng
+		3.1 Xem các tin nhắn với khách hàng
+		3.2 Tạo các tin nhắn với khách hàng (Chat)
+
+	4. Đăng xuất
+		
+V. Member
+	1. Quản lý Sản phẩm
+		1.1 View list Sản phẩm 
+			a) Tìm theo tên 
+			b) Lọc theo giá
+			c) Lọc theo loại sản phẩm
+			d) Lọc theo trạng thái
+			e) Xem các bình luận đi kèm
+	2. Quản lý đơn hàng (Cá nhân)
+		2.1 View list đơn hàng cá nhân 
+			a) Xem chi tiết từng đơn hàng
+			b) Lọc theo thời gian
+			c) Lọc theo trạng thái
+		2.2 Tạo đơn hàng (Mua hàng )
+			a) Chọn sản phẩm nhét vào =))
+			b) Thanh toán Online 
+
+		2.3 Update đơn hàng 
+			a) Hủy đơn hàng
+		
+	3. Quản lý `LoaiSanPham`
+		3.1 View list Loại Sản Phẩm
+
+	4. Quản lý `Tai khoan` (Cá nhân)
+		4.1 Xem thông tin tài khoản
+		4.2 Đổi thông tin tài khoản
+		4.3 Đổi pass
+
+	5. Chat 
+		5.1 Xem tin nhắn với Công tác viên
+		5.2 Nhắn tin với cộng tác viên
+	
+	6. Đăng xuất
+
+	
+VI. Guest
+	1. Quản lý Sản phẩm
+		1.1 View list Sản phẩm 
+			a) Tìm theo tên 
+			b) Lọc theo giá
+			c) Lọc theo loại sản phẩm
+			d) Lọc theo trạng thái
+
+		
+	2. Quản lý `LoaiSanPham`
+		2.1 View list Loại Sản Phẩm
+
+	3. QUản lý `TaiKhoan`
+		3.1 Tạo tài khoản  
+
+	4. Đăng nhập

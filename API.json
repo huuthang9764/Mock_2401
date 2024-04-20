@@ -1,0 +1,1391 @@
+{
+	"info": {
+		"_postman_id": "f88c416f-0e88-4067-b99c-fcae739ba1e2",
+		"name": "MockProject API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33823535",
+		"_collection_link": "https://restless-moon-881360.postman.co/workspace/VTIMockProjectNhom1~96dd520d-5085-4a22-ae5a-a6615c0845cd/collection/30796000-f88c416f-0e88-4067-b99c-fcae739ba1e2?action=share&source=collection_link&creator=33823535"
+	},
+	"item": [
+		{
+			"name": "API Tài khoản",
+			"item": [
+				{
+					"name": "Danh sách Tài khoản",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/TaiKhoan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TaiKhoan"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "64",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "nguoiDungNgaySinh",
+									"disabled": true
+								},
+								{
+									"key": "quyen",
+									"value": "Admin",
+									"disabled": true
+								},
+								{
+									"key": "trangThai",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "03/01/2023",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "02/01/2023",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "totalPages",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "totalElements",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Tài khoàn theo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/TaiKhoan/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TaiKhoan",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo tài khoản",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quyen\": \"Member\",\r\n  \"hoTen\": \"Trương Hữu Nghĩa\",\r\n  \"ngaySinh\": \"02/01/2004\",\r\n  \"gioiTinh\": \"Male\",\r\n  \"soDienThoai\": \"0123456789\",\r\n  \"email\": \"truonghuunghia0201@gmail.com\",\r\n  \"matKhau\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/TaiKhoan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TaiKhoan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update thông tin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"trangThai\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/TaiKhoan/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TaiKhoan",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activeUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Login",
+			"item": []
+		},
+		{
+			"name": "API Loại sản phẩm",
+			"item": [
+				{
+					"name": "Danh sách Loại Sản Phẩm",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "maLoaiSanPham",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "còn lại",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Loại Sản Phẩm by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Loại sản phẩm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenLoaiSanPham\": \"Bàn Phím\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update LoaiSanPham",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenLoaiSanPham\": \"Các loại sản phẩm còn lại 2.2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham/288",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham",
+								"288"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE LoaiSanPham",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Nhiều Loại sản phẩm",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/LoaiSanPham/deleteMany/2,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"LoaiSanPham",
+								"deleteMany",
+								"2,3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Thương hiệu",
+			"item": [
+				{
+					"name": "Danh sách Thương hiệu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "maThuongHieu,desc",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy Thương hiệu by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Thương hiệu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenThuongHieu\": \"Thương hiệu 5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Thương hiệu",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenThuongHieu\": \"Các loại sản phẩm còn lại 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Thương hiệu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Nhiều thương hiệu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThuongHieu/deleteMany/3,4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThuongHieu",
+								"deleteMany",
+								"3,4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Sản phẩm",
+			"item": [
+				{
+					"name": "Danh sách Sản Phẩm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/SanPham?maLoaiSanPham=3&maThuongHieu=4&trangThai=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Lego",
+									"disabled": true
+								},
+								{
+									"key": "maLoaiSanPham",
+									"value": "3"
+								},
+								{
+									"key": "maThuongHieu",
+									"value": "4"
+								},
+								{
+									"key": "sort",
+									"value": "gia",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "trangThai",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy sản phẩm theo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/SanPham/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo sản phẩm mới",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenSanPham\":\"Huu Thang 12\",\r\n    \"xuatXu\":\"TQ\",\r\n    \"gia\":120,\r\n    \"soLuot\":\"khong gi\",\r\n    \"moTaChiTiet\":\"khong co gi ca\",\r\n    \"maLoaiSanPham\":1,\r\n    \"maThuongHieu\":1,\r\n    \"danhSachAnhMinhHoa\": [\r\n        {\r\n            \"url\": \"https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg\"\r\n        },\r\n        {\r\n            \"url\": \"https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/m/sm-a556_galaxy_a55_awesome_lilac_ui.png\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/SanPham",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update sản phẩm",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trangThai\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/SanPham/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gia\":\"1000\",\r\n    \"trangThai\": false,\r\n    \"danhSachAnhCanThemMoi\":[],\r\n    \"danhSachAnhCanXoa\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/SanPham/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/SanPham?sort=maSanPham,desc&search=Huu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "maSanPham,desc"
+								},
+								{
+									"key": "search",
+									"value": "Huu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sort product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/SanPham?trangThai=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "trangThai",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fillter by price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/SanPham?sort=gia,desc&pageNumber=1&pageSize=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SanPham"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "gia,desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by maLoaiSanPham",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Sự kiện",
+			"item": [
+				{
+					"name": "Xem danh sách các chương trình khuyến mãi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/manager/campain/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"manager",
+								"campain",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tenCT\": \"New Campain\", \n    \"kieuGiamGIa\" : \"DanhMuc\", \n    \"phanTramGiam\" :20, \n    \"ngayHetHan\" : \"2024-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/manager/campain/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"manager",
+								"campain",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Nhà cung cấp",
+			"item": []
+		},
+		{
+			"name": "API Phiếu Nhập Kho",
+			"item": []
+		},
+		{
+			"name": "API Đơn hàng",
+			"item": [
+				{
+					"name": "Danh sách Đơn hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DonHang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DonHang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chi tiết đơn hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DonHang/chiTietDonHang/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DonHang",
+								"chiTietDonHang",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trạng thái đơn hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DonHang/trangThaiDonHang/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DonHang",
+								"trangThaiDonHang",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo đơn hàng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tongGiaTri\": 1000000,\r\n  \"maPhuongThucThanhToan\": 1,\r\n  \"maDichVuVanChuyen\": 1,\r\n  \"diaChiGiaoHang\": {\r\n    \"maNguoiDung\": 5,\r\n    \"quocGia\": \"Việt Nam\",\r\n    \"tinh\": \"Hà Nội\",\r\n    \"quan\": \"Cầu Giấy\",\r\n    \"phuong\": \"Dịch Vọng\",\r\n    \"soNha\": \"123\",\r\n    \"trangThaiTonTai\": false\r\n  },\r\n  \"maKhachHang\": 5,\r\n  \"danhSachSanPham\": [\r\n    {\r\n      \"maSanPham\": 1,\r\n      \"donGia\": 500000,\r\n      \"soLuong\": 10,\r\n      \"thanhTien\": 1000000\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/DonHang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DonHang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cập nhật trạng thái",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trangThai\": \"Huy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/DonHang/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DonHang",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Giỏ hàng",
+			"item": [
+				{
+					"name": "Giỏ hàng cá nhân",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/GioHang/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GioHang",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo giỏ hàng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maTaiKhoan\": 5,\r\n  \"maSanPham\": 5,\r\n  \"donGia\": 1000,\r\n  \"soLuong\": 5,\r\n  \"thanhTien\": 5000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/GioHang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GioHang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chỉnh giỏ hàng",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maTaiKhoan\": 5,\r\n  \"maSanPham\": 5,\r\n  \"soLuong\": 6,\r\n  \"thanhTien\": 6000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/GioHang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GioHang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa giỏ hàng",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maTaiKhoan\": 5,\r\n  \"maSanPham\": 5,\r\n  \"soLuong\": 6,\r\n  \"thanhTien\": 6000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/GioHang/5/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GioHang",
+								"5",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Dịch vụ vận chuyển",
+			"item": [
+				{
+					"name": "Danh sách Dịch Vụ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DichVuVanChuyen?sort=maDichVu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DichVuVanChuyen"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "pageNumber",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "maDichVu"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Phương thức thanh toán",
+			"item": [
+				{
+					"name": "Danh sách Phương thức",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/PhuongThucThanhToan?sort=maPhuongThuc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PhuongThucThanhToan"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "maPhuongThuc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Thống kê",
+			"item": [
+				{
+					"name": "Thống kê tổng quát",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThongKe/TongQuat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThongKe",
+								"TongQuat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách nhân viên",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ceo/danhsachnhanvien",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ceo",
+								"danhsachnhanvien"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông đơn hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ThongKe/DonHang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ThongKe",
+								"DonHang"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Chứa các API thuần về thống kê"
+		},
+		{
+			"name": "API Địa chỉ",
+			"item": [
+				{
+					"name": "LẤy Địa chỉ theo Mã người dùng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DiaChi/gioHangCuaToi/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DiaChi",
+								"gioHangCuaToi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LẤy Địa chỉ theo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DiaChi/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DiaChi",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tạo địa chỉ mới",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maNguoiDung\": 2,\r\n  \"quocGia\": \"Việt Nam\",\r\n  \"tinh\": \"Hà Nội\",\r\n  \"quan\": \"Cầu Giấy\",\r\n  \"phuong\": \"Dịch Vọng 2\",\r\n  \"soNha\": \"123A/2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/DiaChi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DiaChi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa địa chỉ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/DiaChi/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DiaChi",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update địa chỉ",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"soNha\": \"Địa chỉ 14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/DiaChi/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"DiaChi",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

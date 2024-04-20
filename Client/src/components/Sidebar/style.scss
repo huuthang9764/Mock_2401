@@ -1,0 +1,11 @@
+.sidebar-swapper {
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  .demo-logo-vertical {
+    height: 60px;
+  }
+}

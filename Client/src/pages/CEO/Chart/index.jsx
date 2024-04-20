@@ -1,0 +1,6 @@
+export { default as DoanhThu } from './DoanhThu/doanhthu.jsx'
+export { default as ChiTieu } from './ChiTieu/chitieu.jsx'
+export { default as DonHang } from './DonHang/donhang.jsx'
+export { default as NguoiDung } from './NguoiDung/nguoidung.jsx'
+export { default as SanPham } from './SanPham/sanpham.jsx'
+export { default as Today } from './Other/today.jsx'

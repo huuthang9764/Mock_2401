@@ -1,0 +1,38 @@
+.carousel {
+    width: 70vw;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-item img {
+    width: 70vw;
+    height: 300px;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .carousel-control-prev-icon:before, .carousel-control-next-icon:before {
+    content: none;
+  }
+  
+  .carousel-inner {
+    position: relative;
+  }
+  
+  .carousel-item {
+    display: none;
+  }
+  
+  .carousel-item.active {
+    display: block;
+  }
+  

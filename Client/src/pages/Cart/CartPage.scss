@@ -1,0 +1,42 @@
+.cart-container {
+  max-height: 500px; // Chiều cao cố định của khu vực chứa bảng
+  overflow-y: auto; // Kích hoạt thanh cuộn khi nội dung vượt quá chiều cao
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 20px;
+}
+.table-container {
+  overflow: auto;
+  max-height: 400px; /* Thiết lập chiều cao tối đa của bảng */
+}
+
+.footer {
+position: sticky;
+  bottom: 0;
+  left: 50px;
+  right: 50px;
+  background-color: #f8f7f7;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  .footer-content {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .totalcost {
+    text-align: right;
+    font-size: 25px;
+  }
+
+  .btn-change {
+    text-align: right;
+    font-size: 15px;
+  }
+}
+.table-container {
+  overflow: auto;
+  max-height: 400px; /* Thiết lập chiều cao tối đa của bảng */
+}

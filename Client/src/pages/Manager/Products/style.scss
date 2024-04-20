@@ -1,0 +1,18 @@
+.header-table{
+  justify-content: space-around;
+  margin: 20px 0;
+  .btn-filter{
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-filter h4{
+    margin-bottom: 10px;
+  }
+  
+}
+
+.table-pagi{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
